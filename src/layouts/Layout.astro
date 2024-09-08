@@ -1,0 +1,55 @@
+---
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>
+<style is:global>
+
+	@font-face{
+		font-family: Freshman;
+		src: url('/fonts/Freshman.ttf') format('truetype');
+		font-weight: normal;
+		font-style: normal;
+		font-display: swap;
+	}
+
+	@font-face{
+		font-family: Akshar;
+		src: url('/fonts/Akshar.ttf') format('truetype');
+
+	}
+
+	:root {
+		--primary: #212121;
+		--secondary: #323232;
+		--secondary-light: #454545;
+		--accent: #DDCA24;
+		--accent-light: #F1E792;
+		--white: #EFE6E6;
+		--black: #070707;
+		--light-accent-opacity: hsla(54, 77%, 76%, 0.199);
+		
+	}
+	html {
+		font-family: Akshar, sans-serif;
+		background: #13151a;
+	}
+
+</style>
