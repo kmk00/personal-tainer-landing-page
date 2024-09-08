@@ -3,7 +3,7 @@ import Image from "astro/components/Image.astro";
 import DoubleArrow from "../images/double-arrow-down.svg";
 ---
 
-<section class="hero-section">
+<section id="hero-section" class="hero-section">
   <div class="image-box"></div>
   <div class="text-box">
     <h1>OSOBISTY TRENER, KTÓRY POMOŻE CI <span>OSIĄGNĄĆ</span> WYMARZONĄ<span> FORMĘ</span></h1>
@@ -33,7 +33,7 @@ import DoubleArrow from "../images/double-arrow-down.svg";
     flex-direction: column;
     align-items: center;
     gap: 2rem;
-    max-width: 1440px;
+    max-width: var(--max-width);
     margin: 0 auto;
     position: absolute;
     z-index: 1;

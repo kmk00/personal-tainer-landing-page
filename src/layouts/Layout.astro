@@ -21,6 +21,19 @@ const { title } = Astro.props;
 	</body>
 </html>
 <style is:global>
+	:root {
+		--primary: #212121;
+		--secondary: #323232;
+		--secondary-light: #454545;
+		--accent: #DDCA24;
+		--accent-light: #F1E792;
+		--white: #EFE6E6;
+		--black: #070707;
+		--light-accent-opacity: hsla(54, 77%, 76%, 0.199);
+		--max-width: 1440px;
+		--border-radius: 12px;
+		--font-main: 'Aharoni', sans-serif;
+	}
 
 	@font-face{
 		font-family: Freshman;
@@ -42,18 +55,8 @@ const { title } = Astro.props;
 		padding: 0;
 	}
 
-	:root {
-		--primary: #212121;
-		--secondary: #323232;
-		--secondary-light: #454545;
-		--accent: #DDCA24;
-		--accent-light: #F1E792;
-		--white: #EFE6E6;
-		--black: #070707;
-		--light-accent-opacity: hsla(54, 77%, 76%, 0.199);
-	}
 	html {
-		font-family: Akshar, sans-serif;
+		font-family:  var(--font-main);
 		background: #13151a;
 	}
 
