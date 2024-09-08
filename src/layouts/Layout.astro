@@ -36,6 +36,12 @@ const { title } = Astro.props;
 
 	}
 
+	*, *::before, *::after {
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+	}
+
 	:root {
 		--primary: #212121;
 		--secondary: #323232;
@@ -45,7 +51,6 @@ const { title } = Astro.props;
 		--white: #EFE6E6;
 		--black: #070707;
 		--light-accent-opacity: hsla(54, 77%, 76%, 0.199);
-		
 	}
 	html {
 		font-family: Akshar, sans-serif;
