@@ -1,0 +1,111 @@
+---
+import SectionTitle from "./SectionTitle.astro";
+import ImageTitle from "../images/Arrow 2.svg";
+import Card from "./Card.astro";
+import Image from "astro/components/Image.astro";
+import myImage from "../images/dumbell-card.png";
+
+const card1 = [
+    'Treningi dopasowane do Twojego poziomu i celów',
+    'Regularna kontrola postępów',
+    'Możliwość skupienia się na wybranych obszarach ciała lub konkretnej dyscyplinie sportowej'
+]
+
+const card2 = [
+    'Łatwe do przygotowania przepisy, idealne na każdy dzień',
+    'Regularna analiza wyników i modyfikacje diety'
+]
+
+const card3 = [
+    'Regularne zajęcia w określonym harmonogramie',
+    'Większa motywacja dzięki współpracy z innymi uczestnikami'
+]
+---
+
+<section id="offer" class="offer">
+
+    <div class="content-box">
+        <SectionTitle title="oferta" image={ImageTitle} />
+        <div class="container">
+            <div class="left">
+                <Card title="Indywidualny plan treningowy" content={card1} primary/>
+            </div>
+            <div class="right">
+                <h3 class="title">CO MAMY DO ZAOFEROWANIA?</h3>
+                <div class="card-box">
+                    <Card title="Plany dietetyczne" content={card2} />
+                    <Card title="Treningi grupowe" content={card3} />
+                </div>
+            </div>
+        </div>
+        <Image src={myImage} class="image" alt="dumbell image"/>
+    </div>
+
+
+</section>
+
+
+<style>
+
+    .offer {
+        background-color: var(--secondary);
+        border-radius: var(--border-radius);
+    }
+
+    .content-box {
+        max-width: var(--max-width);
+        padding: 5rem .5rem;
+        margin-inline: auto;
+        position: relative;
+    }
+
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-end;
+        gap: 1rem;
+        position: relative;
+        z-index: 2;
+    }
+
+    .left {
+        flex-basis: 400px;
+        padding: 1.2rem;
+        flex-grow: 1;
+    }
+
+    .right {
+        flex-basis: 60%;
+        flex-grow: 999;
+        padding: 1.2rem;
+
+    }
+
+    .title{
+        text-align: center;
+        font-size: 2.4rem;
+        font-family: 'Freshman', sans-serif;
+        font-weight: 400;
+        color: var(--white);
+        margin-bottom: 2.6rem;
+    }
+
+    .card-box {
+        display: flex;
+        gap:2rem;
+        justify-content: center;
+    }
+
+    .image {
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 1;
+        width: calc(10vw + 20rem);
+        opacity: 0.7;
+    }
+
+
+
+</style>
