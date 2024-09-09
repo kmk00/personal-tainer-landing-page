@@ -1,0 +1,107 @@
+---
+import SectionTitle from "./SectionTitle.astro";
+
+
+import ImageTitle from "../images/Arrow 4.svg";
+import Question from "./Question";
+
+---
+<section id="faq" class="faq">
+
+    <div class="content-box">
+        <SectionTitle title="FAQ" image={ImageTitle} textColor="dark" />
+
+        <div class="container">
+            <h3 class="title">POSZUKAJ</h3>
+            <h3 class="title">ODPOWIEDZI</h3>
+            <hr class="line" />
+
+            <div class="questions-box">
+                <Question client:load question="Czy muszę mieć wcześniejsze doświadczenie w treningu?" answer="Nie, nie potrzebujesz mieć doświadczenia w treningu." />
+                <Question client:load question="Jak długo trwa jedna sesja treningowa?" answer="Nie, nie potrzebujesz mieć doświadczenia w treningu." />
+                <Question client:load question="Czy mogę odwołać trening?" answer="Tak, możesz odwołać trening, ale proszę o informację z przynajmniej 24-godzinnym wyprzedzeniem. W przypadku odwołania w krótszym czasie, zastrzegam sobie prawo do pobrania opłaty za sesję. Jest to konieczne, aby móc efektywnie zarządzać harmonogramem i umożliwić innym klientom skorzystanie z wolnych terminów." />
+                <Question client:load question="Jak często powinienem trenować, aby zobaczyć efekty?" answer="Częstotliwość treningów zależy od twoich celów, poziomu zaawansowania oraz indywidualnych predyspozycji. Zazwyczaj zaleca się trenowanie 2-4 razy w tygodniu, aby zauważyć postępy w ciągu 4-6 tygodni. W połączeniu z odpowiednią dietą i regeneracją, efekty mogą być widoczne jeszcze szybciej." />
+                <Question client:load question="Czy mogę trenować, jeśli mam kontuzję?" answer="To zależy od rodzaju kontuzji. Ważne jest, aby przed rozpoczęciem treningów skonsultować się z lekarzem lub fizjoterapeutą. Jeśli dostanę zielone światło, możemy dostosować plan treningowy tak, aby unikać obciążania kontuzjowanego obszaru i wspierać proces regeneracji." />
+                <Question client:load question="Jak szybko mogę spodziewać się wyników?" answer="Każdy organizm reaguje inaczej, jednak w przypadku regularnych treningów i zdrowego trybu życia pierwsze efekty mogą pojawić się już po 4-6 tygodniach. Pamiętaj, że kluczową rolę odgrywa również dieta oraz regeneracja." />
+                <Question client:load question="Czy oferujesz pakiety treningowe lub zniżki na dłuższą współpracę?" answer="Tak, oferuję pakiety treningowe, które są korzystniejsze cenowo przy dłuższej współpracy. Zapraszam do kontaktu, aby omówić szczegóły oraz dostępne opcje zniżek przy wykupie większej liczby sesji." />
+                <Question client:load question="Co powinienem zabrać na pierwszy trening?" answer="Na pierwszy trening przynieś wygodne ubrania sportowe, buty z odpowiednią amortyzacją, butelkę wody oraz ręcznik. Jeśli posiadasz, warto zabrać również rękawiczki treningowe. Najważniejsze jednak, to zabrać ze sobą pozytywne nastawienie i chęć do pracy nad sobą!" />
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="quote">
+        <p>“Każde pytanie przybliża Cię do celu. Im więcej wiesz, tym łatwiej jest osiągnąć to, co wydaje się niemożliwe.”</p>
+    </div>
+
+</section>
+
+
+
+<style>
+
+    .faq {
+        background-color: var(--white);
+        padding-bottom: 4rem;
+    }
+
+    .content-box {
+        max-width: var(--max-width);
+        padding: 5rem .5rem;
+        margin-inline: auto;
+        position: relative;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .title{
+        text-align: center;
+        font-size: calc(2.5rem + 1vw);
+        font-family: 'Freshman', sans-serif;
+        font-weight: 400;
+        color: var(--secondary);
+    }
+
+    .title:nth-child(2){
+        font-size: calc(3.2rem + 1vw);
+    }
+
+    .line {
+        max-width: 1200px;
+        width: 100%;
+        height: 40px;
+        border-radius: var(--border-radius);
+        background-color: var(--secondary-light);
+    }
+
+    .questions-box {
+        width: 100%;
+        max-width: 1200px;
+        background-color: var(--primary);
+        border-radius: var(--border-radius);
+        padding: 2rem;
+    }
+
+    .quote {
+        background-color: var(--accent-light);
+        width: 100%;
+        text-align: center;
+        font-style: italic;
+        padding: 3rem 1rem;
+        font-size: 2.2rem;
+
+        p {
+            max-width: 1200px;
+            margin-inline: auto;
+        }
+    }
+    
+
+</style>
