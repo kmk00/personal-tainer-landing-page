@@ -1,0 +1,112 @@
+---
+import SectionTitle from "./SectionTitle.astro";
+import ImageTitle from "../images/Arrow 3.svg";
+import { Image } from "astro:assets";
+
+import testimonialImage1 from "../images/client-1.jpg";
+import testimonialImage2 from "../images/client-2.jpg";
+import testimonialImage3 from "../images/client-3.jpg";
+import testimonialImage4 from "../images/client-4.jpg";
+import arrowsImage from "../images/double-arrow-down.svg";
+import Testimonial from "./Testimonial.astro";
+
+---
+
+<section id="testimonials" class="testimonials">
+
+    <div class="content-box">
+        <SectionTitle title="opinie" image={ImageTitle} />
+
+        <h2 class="title">Opinie moich klientow</h2>
+
+        <div class="testimonials-images">
+            <div class="left">
+                <Image src={testimonialImage1 } class="image" alt="Zdjęcie klienta"/>
+                <Image src={testimonialImage4 } class="image" alt="Zdjęcie klienta"/>
+            </div>
+            <div class="right">
+                <Image src={testimonialImage2 } class="image" alt="Zdjęcie klienta"/>
+                <Image src={testimonialImage3 } class="image" alt="Zdjęcie klienta"/>
+            </div>
+            
+        </div>
+        <div class="arrows-box">
+            <Image src={arrowsImage} class="arrows" alt="logo" width={70} height={70} />
+        </div>
+
+        <div class="testimonials-box">
+            <Testimonial text="Treningi z Tomkiem to najlepsza decyzja, jaką podjęłam. Dzięki jego wsparciu zrzuciłam 10 kg i czuję się świetnie!" author="Justyna, lat 36" />
+            <Testimonial text="Polecam każdemu, kto szuka trenera z prawdziwym zaangażowaniem i wiedzą." author="Ewa, lat 23" right/>
+            <Testimonial text="Profesjonalizm, indywidualne podejście i doskonałe efekty – polecam każdemu!" author="Adam, lat 24"/>
+            <Testimonial text="Po treningach z Tomkiem zdałam sobie sprawe, że warto! Polecam dla każdej osoby która chcę rozpocząć treningi." author="Piotr, lat 19" right/>
+        </div>
+
+    </div>
+</section>
+
+
+<style>
+
+    .testimonials {
+    }
+
+    .content-box {
+        max-width: var(--max-width);
+        padding: 5rem .5rem;
+        margin-inline: auto;
+        position: relative;
+    }
+
+    .title{
+        text-align: center;
+        font-size: 4.8rem;
+        max-width: 500px;
+        margin-inline: auto;
+        font-weight: 500;
+        font-family: 'Freshman', sans-serif;
+        color: var(--white);
+    }
+
+    .testimonials-images {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        align-items: center;
+    }
+        
+    .image{
+        border-radius: var(--border-radius);
+        border: 5px solid var(--white);
+    }
+
+    .left,.right{
+        display: flex;
+        gap: 1rem;
+        flex-direction: column;
+    }
+
+    .right{
+        display: flex;
+        flex-direction: column;
+        margin-top: 10rem;
+    }
+
+    .arrows-box{
+        display: flex;
+        justify-content: center;
+    }
+
+    .arrows{
+        margin-block: 2rem;
+        margin-inline: auto;
+    }
+
+    .testimonials-box{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+</style>

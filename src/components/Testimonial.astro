@@ -1,0 +1,55 @@
+---
+
+export interface Props {
+    text: string;
+    author: string;
+    right?: boolean
+}
+
+const { text, author, right } = Astro.props;
+
+
+---
+
+
+
+<div class={'container' + (right ? ' left' : ' right')}>
+    <p class="text">
+        "{text}"
+    </p>
+
+    <p class="author">{author}</p>
+</div>
+
+
+<style>
+
+    .container {
+        background-color: var(--secondary);
+        border-radius: var(--border-radius);
+        color: var(--white);
+        padding: 1rem;
+        width: 70%;        
+    }
+
+    .text {
+        font-size: 1.2rem;
+        font-style: italic;
+    }
+
+    .author {
+        font-size: 1.2rem;
+        font-weight: 700;
+        margin-top: 0.7rem;
+        text-align: right;
+    }
+
+    .right {
+        margin-right: auto;
+    }
+
+    .left {
+        margin-left: auto;
+    }
+
+</style>
