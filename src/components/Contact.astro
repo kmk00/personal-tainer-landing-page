@@ -1,0 +1,143 @@
+---
+import ContactInfo from "./ContactInfo.astro";
+import icon1 from "../images/phone-icon.png";
+import icon2 from "../images/mail-icon.png";
+import icon3 from "../images/instagram.png";
+import icon4 from "../images/tiktoc-icon.png";
+import Image from "astro/components/Image.astro";
+
+import heartImage from "../images/heart-icon.png";
+import arrowImage from "../images/Arrow 2.svg";
+import barbellImage from "../images/barbell.svg";
+import SectionTitle from "./SectionTitle.astro";
+---
+
+<section id="contact" class="contact">
+
+    <div class="content-box">
+
+        <SectionTitle title="kontakt" image={arrowImage} />
+
+        <div class="container">
+            <div class="left">
+                <ContactInfo icon={icon1} text="+ 00 123 456 789" />
+                <ContactInfo icon={icon2} text="example@mail.to" />
+                <ContactInfo icon={icon3} text="@best.trainer" />
+                <ContactInfo icon={icon4} text="@best.trainer" />
+            </div>
+
+            <div class="right">
+                <div class="text-box">
+                    <p>Nie czekaj, zacznij już teraz. Skontaktuj się ze mną i umów na pierwszą, darmową konsultację.</p>
+                    <Image src={heartImage} alt="zdjęcie" />
+                </div>
+
+                <div class="barbell-box">
+                    <Image src={barbellImage} alt="zdjęcie" class="barbell barbell-left" />
+                    <p>Zaplanuj trening już dziś</p>
+                    <Image src={barbellImage} alt="zdjęcie" class="barbell barbell-right" />
+                </div>
+
+                <!-- TODO: Rotate arrow afrer flex wrap break -->
+                 <!-- TODO: Add dashed line  -->
+                <Image src={arrowImage} alt="logo" class="arrow" width={120} height={120} />
+
+            </div>
+        </div>
+
+
+    </div>
+</section>
+
+
+<style>
+
+    h2{
+        font-size: 2rem;
+        padding: 3rem 0;
+        font-family: Freshman, sans-serif;
+        font-weight: normal;
+        color: var(--white);
+    }
+
+    .contact {
+        margin-bottom: 2rem;
+    }
+
+    .content-box {
+        max-width: var(--max-width);
+        padding: 2rem .5rem;
+        margin-inline: auto;
+        position: relative;
+    }
+
+    .container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .barbell-box{
+        display: flex;
+        align-items: center;
+        color: var(--accent-light);
+        gap: 0.6rem;
+        font-weight: 700;
+    }
+
+    .left,.text-box {
+        background-color: var(--secondary);
+        border-radius: var(--border-radius);
+    }
+
+    .barbell-right{
+        transform: rotate(180deg);
+    }
+
+    .text-box{
+        position: relative;
+        color: var(--white);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 1rem;
+
+        p{
+            max-width: 400px;
+            font-size: 1.4rem;
+        }
+
+        img{
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin-top: -4rem;
+            margin-right: -3.3rem;
+            overflow: hidden;
+        }
+    }
+
+    .arrow{
+        transform: rotate(180deg);
+
+    }
+
+    .left, .right{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .left{
+        flex-basis: 500px;
+    }
+
+    .right{
+        gap:2rem
+    }
+
+
+</style>
