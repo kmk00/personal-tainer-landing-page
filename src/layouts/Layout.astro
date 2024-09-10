@@ -33,6 +33,8 @@ const { title } = Astro.props;
 		--max-width: 1440px;
 		--border-radius: 12px;
 		--font-main: 'Aharoni', sans-serif;
+		--box-shadow: 0px 0px 10px 2px var(--black);
+		--box-shadow-light: 0px 0px 10px 2px var(--secondary);
 	}
 
 	@font-face{
@@ -58,6 +60,11 @@ const { title } = Astro.props;
 	html {
 		font-family:  var(--font-main);
 		background: #13151a;
+		scroll-behavior: smooth;
+	}
+
+	body{
+		font-size: calc(1rem + 0.5vw);
 	}
 
 </style>

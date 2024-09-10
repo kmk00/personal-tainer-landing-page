@@ -11,7 +11,7 @@ const Question = ({ question, answer }: Props) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const containerStyle = {
-    fontSize: "1.8rem",
+    fontSize: "clamp(1.6rem, 5vw, 1.8rem)",
     color: "var(--white)",
   };
 
@@ -27,7 +27,8 @@ const Question = ({ question, answer }: Props) => {
   };
 
   const lineStyle = {
-    width: "90%",
+    width: "100%",
+    maxWidth: "1000px",
     height: "5px",
     backgroundColor: "var(--white)",
     marginInline: "auto",

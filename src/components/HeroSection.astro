@@ -13,7 +13,8 @@ import DoubleArrow from "../images/double-arrow-down.svg";
 
 <style>
   .hero-section {
-    min-height: 40rem;
+    min-height: calc(100vh - 15rem);
+    /* min-height: 40rem; */
     position: relative;
   }
 
@@ -33,8 +34,9 @@ import DoubleArrow from "../images/double-arrow-down.svg";
     flex-direction: column;
     align-items: center;
     gap: 2rem;
-    max-width: var(--max-width);
+    max-width: var(--max-width) ;
     margin: 0 auto;
+    width: 100%;
     position: absolute;
     z-index: 1;
     top: 50%;
@@ -45,7 +47,7 @@ import DoubleArrow from "../images/double-arrow-down.svg";
   .text-box h1 {
     font-family: Akshar, sans-serif;
     font-weight: bold;
-    font-size: 5rem;
+    font-size: clamp(2.3rem, 5vw, 5rem);
     text-transform: uppercase;
     text-align: center;
     color: var(--white);

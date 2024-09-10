@@ -48,7 +48,7 @@ import Question from "./Question";
 
     .content-box {
         max-width: var(--max-width);
-        padding: 5rem .5rem;
+        padding: 2rem .5rem;
         margin-inline: auto;
         position: relative;
     }
@@ -59,18 +59,23 @@ import Question from "./Question";
         justify-content: center;
         align-items: center;
         gap: 1rem;
-    }
 
+        
+    }
+    
     .title{
         text-align: center;
-        font-size: calc(2.5rem + 1vw);
+        font-size: clamp(2.5rem, 5vw, 3.5rem);
         font-family: 'Freshman', sans-serif;
         font-weight: 400;
         color: var(--secondary);
     }
-
+    
     .title:nth-child(2){
-        font-size: calc(3.2rem + 1vw);
+        font-size: clamp(3rem, 8vw, 4rem);
+    }
+    .title:nth-child(1){
+        margin-top: 1rem;
     }
 
     .line {
@@ -87,6 +92,8 @@ import Question from "./Question";
         background-color: var(--primary);
         border-radius: var(--border-radius);
         padding: 2rem;
+        box-shadow: var(--box-shadow-light);
+
     }
 
     .quote {
@@ -95,7 +102,7 @@ import Question from "./Question";
         text-align: center;
         font-style: italic;
         padding: 3rem 1rem;
-        font-size: 2.2rem;
+        font-size: clamp(1.5rem, 3vw, 2.2rem);
 
         p {
             max-width: 1200px;
