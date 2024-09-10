@@ -1,6 +1,7 @@
 ---
 import Image from "astro/components/Image.astro" 
 import logo from "../images/logo.png"
+import NavigationMobile from "./NavigationMobile"
 ---
 
 <nav class="nav">
@@ -15,6 +16,9 @@ import logo from "../images/logo.png"
       <li><a href="#faq">pytania</a></li>
       <li><a href="#contact">kontakt</a></li>
     </ul>
+    <div class="nav-mobile">
+      <NavigationMobile client:load />
+    </div>
   </div>
 </nav>
 
@@ -23,6 +27,7 @@ import logo from "../images/logo.png"
   .nav {
     background-color: var(--secondary);
   }
+
 
   .nav ul {
     display: flex;
@@ -36,7 +41,7 @@ import logo from "../images/logo.png"
     font-family: Freshman, sans-serif;
     text-decoration: none;
     color: var(--white);
-    font-size: 1.2rem;
+    font-size: clamp(1.2rem, 1.5vw, 1.5rem);
     text-transform: uppercase;
     transition: all 0.3s ease;
   }
@@ -46,13 +51,26 @@ import logo from "../images/logo.png"
     color: var(--accent-light);
   }
 
+  .nav-mobile{
+    display: none;
+  }
+
+  @media (max-width: 630px) {
+     .content-box > a, .nav ul{
+      display: none;
+    }
+    .nav-mobile{
+      display: block;
+    }
+  }
+
   .content-box {
     display: flex;
     justify-content: space-between;
     align-items: center;
     max-width: 1440px;
     margin: 0 auto;
-    padding: 0.5rem;
+    padding: 1rem;
   }
 
 </style>
