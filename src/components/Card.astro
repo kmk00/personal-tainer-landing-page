@@ -43,6 +43,17 @@ const primaryClass = primary ? 'primary-card' : 'card card-box'
     .primary-card {
         background-color: var(--accent-light);
         color: var(--balck);
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; 
+    }
+
+    .card-content{
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
 
     .card{
@@ -62,6 +73,7 @@ const primaryClass = primary ? 'primary-card' : 'card card-box'
 
     .card-box{
         flex-basis: 400px;
+        flex-grow: 1;
     }
 
     ul{
