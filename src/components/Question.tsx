@@ -22,7 +22,8 @@ const Question = ({ question, answer }: Props) => {
     width: "100%",
     gap: "1rem",
     cursor: "pointer",
-
+    fontSize: "inherit",
+    border: "none",
     color: isOpen ? "var(--secondary-light)" : "var(--white)",
   };
 
@@ -54,7 +55,7 @@ const Question = ({ question, answer }: Props) => {
 
   return (
     <div style={containerStyle}>
-      <div onClick={() => setIsOpen(!isOpen)} style={questionStyle}>
+      <button onClick={() => setIsOpen(!isOpen)} style={questionStyle}>
         <p>{question}</p>
         <img
           style={imageStyle}
@@ -63,7 +64,7 @@ const Question = ({ question, answer }: Props) => {
           width={20}
           height={20}
         />
-      </div>
+      </button>
       <div onClick={() => setIsOpen(!isOpen)} style={answerContainerStyle}>
         <p style={answerStyle}>{answer}</p>
       </div>
