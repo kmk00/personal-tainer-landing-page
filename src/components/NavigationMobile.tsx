@@ -51,9 +51,9 @@ const NavigationMobile = () => {
             <path
               fill="none"
               stroke="var(--white)"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
               d="M5 5L12 5L19 5M5 12H19M5 19L12 19L19 19"
             >
               <animate
@@ -112,20 +112,3 @@ const NavigationMobile = () => {
 };
 
 export default NavigationMobile;
-
-// .nav ul {
-//     display: flex;
-//     gap: 1rem;
-//     list-style: none;
-//     margin: 0;
-//     padding: 0;
-//   }
-
-//   .nav a {
-//     font-family: Freshman, sans-serif;
-//     text-decoration: none;
-//     color: var(--white);
-//     font-size: clamp(1.2rem, 1.5vw, 1.5rem);
-//     text-transform: uppercase;
-//     transition: all 0.3s ease;
-//   }
